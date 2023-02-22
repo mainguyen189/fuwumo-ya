@@ -7,14 +7,14 @@
                 </p>
 
                 <p class="subtitle">
-                    From Gensokyo
+                    In Gensokyo our currency is Mon
                 </p>
             </div>
         </section>
 
         <div class="columns is-multiline">
             <div class="column is-12">
-                <h2 class="is-size-2 has-text-centered">Latest fumo's</h2>
+                <h2 class="is-size-2 has-text-centered">Latest Fumo's</h2>
             </div>
         </div>
         
@@ -27,7 +27,7 @@
                 <h3 class="is-size-4">{{ product.name }}</h3>
                 <p class="is-size-6 has-text-grey"> price:{{ product.price }}</p>
 
-                View details
+                <router-link v-bind:to="product.get_absolute_url" class="button is-dark mt-4">View Details</router-link>
             </div>
         </div>
     </div>
@@ -37,7 +37,7 @@
 import axios from 'axios'
 
     export default {
-        name: 'Home',
+        name: 'HomeView',
         data() {
             return {
                 latestProducts: []
