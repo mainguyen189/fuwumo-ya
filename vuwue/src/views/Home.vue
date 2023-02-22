@@ -37,7 +37,7 @@
 import axios from 'axios'
 
     export default {
-        name: 'HomePage',
+        name: 'Home',
         data() {
             return {
                 latestProducts: []
