@@ -35,6 +35,10 @@
       </div>
     </nav>
 
+    <div class="is-loading-bar has-text-centered" v-bind:class="{'is-loading': $store.state.isLoading }">
+      <div class="lds-dual-ring"></div>
+    </div>
+
     <section class="section">
       <router-view />
     </section>
@@ -77,4 +81,43 @@
 
 <style lang="scss">
 @import "../node_modules/bulma";
+
+.lds-dual-ring {
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+.lds-dual-ring:after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid azure;
+  border-color: azure transparent azure transparent;
+  animation: lds-dual-ring 1.5s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.is-loading-bar {
+  height: auto;
+  overflow: hidden;
+
+  -webkit-animation: all 0.5s;
+  transition: all 0.5s;
+
+  &.is-loading {
+    height: 80px;
+  }
+}
 </style>
