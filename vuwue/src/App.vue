@@ -15,8 +15,29 @@
           <span aria-hidden="true"></span>
         </a>
       </div>
-
+      <!-- search bar -->
       <div class="navbar-menu" id="navbar-menu" v-bind:class="{'is-active': showMobileMenu}">
+        <div class="navbar-start">
+          <div class="navbar-item">
+            <form method="get" action="/search">
+              <div class="field has-addons">
+                <div class="control">
+                  <input type="text" class="input" placeholder="Whose fumo are you looking for?" name="query">
+                </div>
+
+                <div class="control">
+                  <button class="button is-success">
+                    <span class="icon">
+                      <i class="fas fa-search"></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        
         <div class="navbar-end">
           <router-link to="/scarlet" class="navbar-item">Scarlet Mansion</router-link>
           <router-link to="/eientei" class="navbar-item">Eientei</router-link>
