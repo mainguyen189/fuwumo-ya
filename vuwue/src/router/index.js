@@ -4,6 +4,7 @@ import HomeView from '../views/Home.vue'
 import ProductView from '../views/Product.vue'
 import CategoryView from '../views/Category.vue'
 import SearchView from '../views/Search.vue'
+import CartView from '../views/Cart.vue'
 
 const routes = [
     {
@@ -25,6 +26,11 @@ const routes = [
         path: '/:category_slug/',
         name: 'CategoryView',
         component: CategoryView
+    },
+    {
+        path: '/cart',
+        name: 'CartView',
+        component: CartView
     },
     
 
